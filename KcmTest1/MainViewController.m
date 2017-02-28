@@ -7,6 +7,7 @@
 //
 
 #import "MainViewController.h"
+#import "MenuManager.h"
 
 @interface MainViewController ()
 
@@ -24,14 +25,27 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)openMenuWithID:(MenuID)menuID {
+    
+    MenuInfo *menuInfo = [[MenuManager manager] menuWithID:menuID];
+    if (menuInfo) {
+        Class cls = menuInfo.menuClass;
+        if (cls && [cls isSubclassOfClass:[UIViewController class]]) {
+            UIViewController *vc = [[cls alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+        else {
+            NSLog(@"%@ cls error!", NSStringFromSelector(_cmd));
+        }
+    }
+    else {
+        NSLog(@"%@ error!", NSStringFromSelector(_cmd));
+    }
+    
 }
-*/
+
+- (IBAction)touchUpInsidePaging:(id)sender {
+    [self openMenuWithID:MenuPagingView];
+}
 
 @end
