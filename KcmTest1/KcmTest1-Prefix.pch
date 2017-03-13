@@ -8,6 +8,8 @@
 #import <Foundation/Foundation.h>
 #endif
 
-#ifndef DEBUG
+#ifdef DEBUG
+#define NSLog( s, ... ) NSLog(@"\n file : %@ \n function : %s \n line : %d \n %@", [[NSString stringWithUTF8String:__FILE__] lastPathComponent] , __PRETTY_FUNCTION__, __LINE__, [NSString stringWithFormat:(s),##__VA_ARGS__])
+#else
 #define NSLog( s, ... )
 #endif
