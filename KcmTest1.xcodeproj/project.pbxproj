@@ -35,6 +35,7 @@
 /* Begin PBXFileReference section */
 		996EF8041E650F7A008DEABE /* MenuManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuManager.h; sourceTree = "<group>"; };
 		996EF8051E650F7A008DEABE /* MenuManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuManager.m; sourceTree = "<group>"; };
+		99A6D4881E765D0200FCB176 /* KcmTest1-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "KcmTest1-Prefix.pch"; sourceTree = "<group>"; };
 		99AFCF2E1E63F14A0029F0D2 /* KcmTest1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KcmTest1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99AFCF321E63F14A0029F0D2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		99AFCF341E63F14A0029F0D2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -121,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				99AFCF321E63F14A0029F0D2 /* main.m */,
+				99A6D4881E765D0200FCB176 /* KcmTest1-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";

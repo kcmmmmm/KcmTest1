@@ -1,0 +1,13 @@
+//
+// Prefix header for all source files of the 'NHAppCard' target in the 'NHAppCard' project
+//
+
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#endif
+
+#ifndef DEBUG
+#define NSLog( s, ... )
+#endif
