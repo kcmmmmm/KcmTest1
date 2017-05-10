@@ -6,6 +6,7 @@
 #ifdef __OBJC__
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
+#import <CoreData/CoreData.h>
 #endif
 
 #ifdef DEBUG
@@ -13,3 +14,5 @@
 #else
 #define NSLog( s, ... )
 #endif
+
+#define RGB(r, g, b) [UIColor colorWithRed:r/255.0f green:g/255.0f blue:b/255.0f alpha:1.0f]

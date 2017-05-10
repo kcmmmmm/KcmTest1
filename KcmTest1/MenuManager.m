@@ -8,6 +8,19 @@
 
 #import "MenuManager.h"
 #import "PagingViewController.h"
+#import "DynamicViewController.h"
+#import "PageViewController.h"
+#import "DynamicMenuViewController.h"
+#import "ZoomScrollViewController.h"
+#import "AddressBookViewController.h"
+
+NSArray* makeIndexListFromMenus(NSArray* menus) {
+    NSMutableArray* idxArr = [NSMutableArray array];
+    for (MenuInfo* mi in menus) {
+        [idxArr addObject:[NSNumber numberWithInteger:mi.menuID]];
+    }
+    return idxArr;
+}
 
 static MenuManager *menuManager;
 
@@ -49,6 +62,30 @@ static MenuManager *menuManager;
                                              menuTitle:@"페이징뷰"]
      ];
     
+    [self addMenuInfo:[[MenuInfo alloc] initWithMenuID:DynamicView
+                                             menuClass:[DynamicViewController class]
+                                             menuTitle:@"다이나믹뷰"]
+     ];
+    
+    [self addMenuInfo:[[MenuInfo alloc] initWithMenuID:PageView
+                                             menuClass:[PageViewController class]
+                                             menuTitle:@"페이지뷰"]
+     ];
+    
+    [self addMenuInfo:[[MenuInfo alloc] initWithMenuID:DynamicMenuView
+                                             menuClass:[DynamicMenuViewController class]
+                                             menuTitle:@"다이나믹메뉴뷰"]
+     ];
+    
+    [self addMenuInfo:[[MenuInfo alloc] initWithMenuID:ZoomScrollView
+                                             menuClass:[ZoomScrollViewController class]
+                                             menuTitle:@"줌스크롤뷰"]
+     ];
+
+    [self addMenuInfo:[[MenuInfo alloc] initWithMenuID:AddressBookView
+                                             menuClass:[AddressBookViewController class]
+                                             menuTitle:@"주소록"]
+     ];
 }
 
 - (void)addMenuInfo:(MenuInfo *)menuInfo {
@@ -64,6 +101,11 @@ static MenuManager *menuManager;
         _mainMenu = [NSMutableArray array];
         
         [_mainMenu addObject:[self menuWithID:MenuPagingView]];
+        [_mainMenu addObject:[self menuWithID:DynamicView]];
+        [_mainMenu addObject:[self menuWithID:DynamicMenuView]];
+        [_mainMenu addObject:[self menuWithID:PageView]];
+        [_mainMenu addObject:[self menuWithID:ZoomScrollView]];
+        [_mainMenu addObject:[self menuWithID:AddressBookView]];
     }
     return _mainMenu;
 }

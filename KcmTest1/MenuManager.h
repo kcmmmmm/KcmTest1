@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "MenuInfo.h"
 
+extern NSArray* makeIndexListFromMenus(NSArray* menus);
+
 @interface MenuManager : NSObject {
     NSMutableArray *_menu;
     NSMutableArray *_mainMenu;

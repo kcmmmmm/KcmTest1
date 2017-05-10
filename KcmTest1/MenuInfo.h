@@ -10,6 +10,11 @@
 
 typedef NS_ENUM(NSInteger, MenuID) {
     MenuPagingView,
+    DynamicView,
+    PageView,
+    DynamicMenuView,
+    ZoomScrollView,
+    AddressBookView,
 };
 
 @interface MenuInfo : NSObject {

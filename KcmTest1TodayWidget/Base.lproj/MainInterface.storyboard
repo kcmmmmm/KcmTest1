@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="M4Y-Lb-cyx">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Today View Controller-->
+        <scene sceneID="cwh-vc-ff4">
+            <objects>
+                <viewController id="M4Y-Lb-cyx" customClass="TodayViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ft6-oW-KC0"/>
+                        <viewControllerLayoutGuide type="bottom" id="FKl-LY-JtV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="S3S-Oj-5AN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="95"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZhR-gd-X6q">
+                                <rect key="frame" x="0.0" y="32" width="105.5" height="30"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Button1">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchUpInsideWidgetBtn:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="9bk-A4-JkO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6PU-5A-IT9">
+                                <rect key="frame" x="214.5" y="32" width="105.5" height="30"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Button3">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nAc-xV-7Vx">
+                                <rect key="frame" x="105.5" y="32" width="109" height="30"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <state key="normal" title="Button2">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchUpInsideWidgetBtn:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="Gv4-D7-gVs"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="nAc-xV-7Vx" firstAttribute="centerY" secondItem="S3S-Oj-5AN" secondAttribute="centerY" id="Fun-2M-bnN"/>
+                            <constraint firstItem="nAc-xV-7Vx" firstAttribute="width" secondItem="S3S-Oj-5AN" secondAttribute="width" multiplier="0.34" id="G8r-Jg-5Q6"/>
+                            <constraint firstItem="6PU-5A-IT9" firstAttribute="width" secondItem="S3S-Oj-5AN" secondAttribute="width" multiplier="0.33" id="SK4-rp-Oja"/>
+                            <constraint firstItem="nAc-xV-7Vx" firstAttribute="leading" secondItem="ZhR-gd-X6q" secondAttribute="trailing" id="SjM-dz-NN8"/>
+                            <constraint firstItem="ZhR-gd-X6q" firstAttribute="width" secondItem="S3S-Oj-5AN" secondAttribute="width" multiplier="0.33" id="cuv-VK-N7q"/>
+                            <constraint firstItem="ZhR-gd-X6q" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leading" id="dKk-fn-wTd"/>
+                            <constraint firstItem="ZhR-gd-X6q" firstAttribute="centerY" secondItem="S3S-Oj-5AN" secondAttribute="centerY" id="jsc-fx-zXz"/>
+                            <constraint firstItem="nAc-xV-7Vx" firstAttribute="centerX" secondItem="S3S-Oj-5AN" secondAttribute="centerX" id="mLT-4q-SJx"/>
+                            <constraint firstAttribute="trailing" secondItem="6PU-5A-IT9" secondAttribute="trailing" id="tPF-34-3ab"/>
+                            <constraint firstItem="6PU-5A-IT9" firstAttribute="centerY" secondItem="S3S-Oj-5AN" secondAttribute="centerY" id="xui-j0-rMm"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="95"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

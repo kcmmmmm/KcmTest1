@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PagingViewController : UIViewController
+@interface PagingViewController : UIViewController <UITextFieldDelegate>
+
+@property (strong) IBOutlet NSLayoutConstraint *bottomConstraint;
+
+@property (weak, nonatomic) IBOutlet UITextField *id_Field;
+@property (weak, nonatomic) IBOutlet UITextField *password_Field;
+@property (weak, nonatomic) IBOutlet UIButton *loginBtn;
+@property (weak, nonatomic) IBOutlet UIView *btnView;
 
 @end

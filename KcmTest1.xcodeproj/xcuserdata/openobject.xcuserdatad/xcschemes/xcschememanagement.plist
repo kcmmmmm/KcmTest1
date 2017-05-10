@@ -9,9 +9,19 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>KcmTest1TodayWidget.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>9962B7491E80E60900A333A8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>99AFCF2D1E63F14A0029F0D2</key>
 		<dict>
 			<key>primary</key>
