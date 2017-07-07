@@ -55,6 +55,8 @@
 		AE4C7D931F0F49C000811290 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE4C7D921F0F49C000811290 /* AVFoundation.framework */; };
 		AE4C7D971F0F5F6E00811290 /* TouchIDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE4C7D951F0F5F6E00811290 /* TouchIDViewController.m */; };
 		AE4C7D981F0F5F6E00811290 /* TouchIDViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE4C7D961F0F5F6E00811290 /* TouchIDViewController.xib */; };
+		AE4C7D9C1F0F703B00811290 /* ParallaxScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE4C7D9A1F0F703B00811290 /* ParallaxScrollViewController.m */; };
+		AE4C7D9D1F0F703B00811290 /* ParallaxScrollViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE4C7D9B1F0F703B00811290 /* ParallaxScrollViewController.xib */; };
 		D9B4F4B6B2E4C1146ABA744C /* libPods-KcmTest1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A0D7D255C1367DBF53CC139 /* libPods-KcmTest1.a */; };
 /* End PBXBuildFile section */
 
@@ -172,6 +174,9 @@
 		AE4C7D941F0F5F6E00811290 /* TouchIDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchIDViewController.h; sourceTree = "<group>"; };
 		AE4C7D951F0F5F6E00811290 /* TouchIDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchIDViewController.m; sourceTree = "<group>"; };
 		AE4C7D961F0F5F6E00811290 /* TouchIDViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TouchIDViewController.xib; sourceTree = "<group>"; };
+		AE4C7D991F0F703B00811290 /* ParallaxScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParallaxScrollViewController.h; sourceTree = "<group>"; };
+		AE4C7D9A1F0F703B00811290 /* ParallaxScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParallaxScrollViewController.m; sourceTree = "<group>"; };
+		AE4C7D9B1F0F703B00811290 /* ParallaxScrollViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ParallaxScrollViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -336,6 +341,9 @@
 				AE4C7D941F0F5F6E00811290 /* TouchIDViewController.h */,
 				AE4C7D951F0F5F6E00811290 /* TouchIDViewController.m */,
 				AE4C7D961F0F5F6E00811290 /* TouchIDViewController.xib */,
+				AE4C7D991F0F703B00811290 /* ParallaxScrollViewController.h */,
+				AE4C7D9A1F0F703B00811290 /* ParallaxScrollViewController.m */,
+				AE4C7D9B1F0F703B00811290 /* ParallaxScrollViewController.xib */,
 			);
 			path = KcmTest1;
 			sourceTree = "<group>";
@@ -504,6 +512,7 @@
 				99AFCF5F1E6400FF0029F0D2 /* PagingViewController.xib in Resources */,
 				99F1AC551EA59F4500982ABF /* AddressBookViewController.xib in Resources */,
 				AE4C7D911F0F498A00811290 /* ScannerViewController.xib in Resources */,
+				AE4C7D9D1F0F703B00811290 /* ParallaxScrollViewController.xib in Resources */,
 				99FD25BC1E9B1840007068B3 /* ZoomScrollViewController.xib in Resources */,
 				994B7F8A1E9612F600DF15E8 /* PageViewController.xib in Resources */,
 				AE4C7D981F0F5F6E00811290 /* TouchIDViewController.xib in Resources */,
@@ -596,6 +605,7 @@
 				990DDE9A1E83AF12006947C5 /* ServerResponse.m in Sources */,
 				994B7F841E96039B00DF15E8 /* DynamicViewController.m in Sources */,
 				990DDE9E1E83C009006947C5 /* InterfaceWeather.m in Sources */,
+				AE4C7D9C1F0F703B00811290 /* ParallaxScrollViewController.m in Sources */,
 				994B7F891E9612F600DF15E8 /* PageViewController.m in Sources */,
 				AE4C7D971F0F5F6E00811290 /* TouchIDViewController.m in Sources */,
 				99FD25BB1E9B1840007068B3 /* ZoomScrollViewController.m in Sources */,

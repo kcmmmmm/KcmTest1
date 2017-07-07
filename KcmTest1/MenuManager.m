@@ -15,6 +15,7 @@
 #import "AddressBookViewController.h"
 #import "ScannerViewController.h"
 #import "TouchIDViewController.h"
+#import "ParallaxScrollViewController.h"
 
 NSArray* makeIndexListFromMenus(NSArray* menus) {
     NSMutableArray* idxArr = [NSMutableArray array];
@@ -98,6 +99,11 @@ static MenuManager *menuManager;
                                              menuClass:[TouchIDViewController class]
                                              menuTitle:@"지문인증"]
      ];
+    
+    [self addMenuInfo:[[MenuInfo alloc] initWithMenuID:ParallaxScrollView
+                                             menuClass:[ParallaxScrollViewController class]
+                                             menuTitle:@"스크롤"]
+     ];
 }
 
 - (void)addMenuInfo:(MenuInfo *)menuInfo {
@@ -120,6 +126,7 @@ static MenuManager *menuManager;
         [_mainMenu addObject:[self menuWithID:AddressBookView]];
         [_mainMenu addObject:[self menuWithID:ScannerView]];
         [_mainMenu addObject:[self menuWithID:TouchIDView]];
+        [_mainMenu addObject:[self menuWithID:ParallaxScrollView]];
     }
     return _mainMenu;
 }

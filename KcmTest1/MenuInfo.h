@@ -17,6 +17,7 @@ typedef NS_ENUM(NSInteger, MenuID) {
     AddressBookView,
     ScannerView,
     TouchIDView,
+    ParallaxScrollView,
 };
 
 @interface MenuInfo : NSObject {
