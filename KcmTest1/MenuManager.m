@@ -13,6 +13,8 @@
 #import "DynamicMenuViewController.h"
 #import "ZoomScrollViewController.h"
 #import "AddressBookViewController.h"
+#import "ScannerViewController.h"
+#import "TouchIDViewController.h"
 
 NSArray* makeIndexListFromMenus(NSArray* menus) {
     NSMutableArray* idxArr = [NSMutableArray array];
@@ -86,6 +88,16 @@ static MenuManager *menuManager;
                                              menuClass:[AddressBookViewController class]
                                              menuTitle:@"주소록"]
      ];
+    
+    [self addMenuInfo:[[MenuInfo alloc] initWithMenuID:ScannerView
+                                             menuClass:[ScannerViewController class]
+                                             menuTitle:@"스캐너"]
+     ];
+    
+    [self addMenuInfo:[[MenuInfo alloc] initWithMenuID:TouchIDView
+                                             menuClass:[TouchIDViewController class]
+                                             menuTitle:@"지문인증"]
+     ];
 }
 
 - (void)addMenuInfo:(MenuInfo *)menuInfo {
@@ -106,6 +118,8 @@ static MenuManager *menuManager;
         [_mainMenu addObject:[self menuWithID:PageView]];
         [_mainMenu addObject:[self menuWithID:ZoomScrollView]];
         [_mainMenu addObject:[self menuWithID:AddressBookView]];
+        [_mainMenu addObject:[self menuWithID:ScannerView]];
+        [_mainMenu addObject:[self menuWithID:TouchIDView]];
     }
     return _mainMenu;
 }

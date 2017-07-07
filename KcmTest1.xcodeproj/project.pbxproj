@@ -50,6 +50,11 @@
 		99FD25BB1E9B1840007068B3 /* ZoomScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99FD25B91E9B1840007068B3 /* ZoomScrollViewController.m */; };
 		99FD25BC1E9B1840007068B3 /* ZoomScrollViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99FD25BA1E9B1840007068B3 /* ZoomScrollViewController.xib */; };
 		99FD25BF1E9B1C49007068B3 /* image1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 99FD25BE1E9B1C49007068B3 /* image1.jpg */; };
+		AE4C7D901F0F498A00811290 /* ScannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE4C7D8E1F0F498A00811290 /* ScannerViewController.m */; };
+		AE4C7D911F0F498A00811290 /* ScannerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE4C7D8F1F0F498A00811290 /* ScannerViewController.xib */; };
+		AE4C7D931F0F49C000811290 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE4C7D921F0F49C000811290 /* AVFoundation.framework */; };
+		AE4C7D971F0F5F6E00811290 /* TouchIDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE4C7D951F0F5F6E00811290 /* TouchIDViewController.m */; };
+		AE4C7D981F0F5F6E00811290 /* TouchIDViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE4C7D961F0F5F6E00811290 /* TouchIDViewController.xib */; };
 		D9B4F4B6B2E4C1146ABA744C /* libPods-KcmTest1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A0D7D255C1367DBF53CC139 /* libPods-KcmTest1.a */; };
 /* End PBXBuildFile section */
 
@@ -160,6 +165,13 @@
 		99FD25B91E9B1840007068B3 /* ZoomScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZoomScrollViewController.m; sourceTree = "<group>"; };
 		99FD25BA1E9B1840007068B3 /* ZoomScrollViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZoomScrollViewController.xib; sourceTree = "<group>"; };
 		99FD25BE1E9B1C49007068B3 /* image1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image1.jpg; sourceTree = "<group>"; };
+		AE4C7D8D1F0F498A00811290 /* ScannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScannerViewController.h; sourceTree = "<group>"; };
+		AE4C7D8E1F0F498A00811290 /* ScannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScannerViewController.m; sourceTree = "<group>"; };
+		AE4C7D8F1F0F498A00811290 /* ScannerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScannerViewController.xib; sourceTree = "<group>"; };
+		AE4C7D921F0F49C000811290 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		AE4C7D941F0F5F6E00811290 /* TouchIDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchIDViewController.h; sourceTree = "<group>"; };
+		AE4C7D951F0F5F6E00811290 /* TouchIDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchIDViewController.m; sourceTree = "<group>"; };
+		AE4C7D961F0F5F6E00811290 /* TouchIDViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TouchIDViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +187,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE4C7D931F0F49C000811290 /* AVFoundation.framework in Frameworks */,
 				99698CE11E937F9800CA0928 /* CoreData.framework in Frameworks */,
 				996124EF1E88E5F9004B7533 /* CoreLocation.framework in Frameworks */,
 				999144071E7B7A4A00EF162F /* CoreImage.framework in Frameworks */,
@@ -241,6 +254,7 @@
 		999144051E7B7A4A00EF162F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AE4C7D921F0F49C000811290 /* AVFoundation.framework */,
 				99698CE01E937F9800CA0928 /* CoreData.framework */,
 				996124EE1E88E5F9004B7533 /* CoreLocation.framework */,
 				999144061E7B7A4A00EF162F /* CoreImage.framework */,
@@ -316,6 +330,12 @@
 				99F1AC531EA59F4500982ABF /* AddressBookViewController.xib */,
 				993516591EA71D7000214FBB /* DraggableView.h */,
 				9935165A1EA71D7000214FBB /* DraggableView.m */,
+				AE4C7D8D1F0F498A00811290 /* ScannerViewController.h */,
+				AE4C7D8E1F0F498A00811290 /* ScannerViewController.m */,
+				AE4C7D8F1F0F498A00811290 /* ScannerViewController.xib */,
+				AE4C7D941F0F5F6E00811290 /* TouchIDViewController.h */,
+				AE4C7D951F0F5F6E00811290 /* TouchIDViewController.m */,
+				AE4C7D961F0F5F6E00811290 /* TouchIDViewController.xib */,
 			);
 			path = KcmTest1;
 			sourceTree = "<group>";
@@ -432,12 +452,12 @@
 				TargetAttributes = {
 					9962B7491E80E60900A333A8 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = RQ7LPMR66B;
+						DevelopmentTeam = 4A94WWANM7;
 						ProvisioningStyle = Automatic;
 					};
 					99AFCF2D1E63F14A0029F0D2 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = RQ7LPMR66B;
+						DevelopmentTeam = 4A94WWANM7;
 						ProvisioningStyle = Automatic;
 					};
 					99AFCF461E63F14B0029F0D2 = {
@@ -483,8 +503,10 @@
 				99AFCF411E63F14B0029F0D2 /* LaunchScreen.storyboard in Resources */,
 				99AFCF5F1E6400FF0029F0D2 /* PagingViewController.xib in Resources */,
 				99F1AC551EA59F4500982ABF /* AddressBookViewController.xib in Resources */,
+				AE4C7D911F0F498A00811290 /* ScannerViewController.xib in Resources */,
 				99FD25BC1E9B1840007068B3 /* ZoomScrollViewController.xib in Resources */,
 				994B7F8A1E9612F600DF15E8 /* PageViewController.xib in Resources */,
+				AE4C7D981F0F5F6E00811290 /* TouchIDViewController.xib in Resources */,
 				99AFCF3E1E63F14B0029F0D2 /* Assets.xcassets in Resources */,
 				99AFCF3C1E63F14A0029F0D2 /* Main.storyboard in Resources */,
 				994B7F851E96039B00DF15E8 /* DynamicViewController.xib in Resources */,
@@ -575,9 +597,11 @@
 				994B7F841E96039B00DF15E8 /* DynamicViewController.m in Sources */,
 				990DDE9E1E83C009006947C5 /* InterfaceWeather.m in Sources */,
 				994B7F891E9612F600DF15E8 /* PageViewController.m in Sources */,
+				AE4C7D971F0F5F6E00811290 /* TouchIDViewController.m in Sources */,
 				99FD25BB1E9B1840007068B3 /* ZoomScrollViewController.m in Sources */,
 				994B7F8D1E96218600DF15E8 /* BaseViewController.m in Sources */,
 				995050841E78FA5200D88875 /* CustomAlertView.m in Sources */,
+				AE4C7D901F0F498A00811290 /* ScannerViewController.m in Sources */,
 				99AFCF631E641F920029F0D2 /* MenuInfo.m in Sources */,
 				99AFCF361E63F14A0029F0D2 /* AppDelegate.m in Sources */,
 				99AFCF331E63F14A0029F0D2 /* main.m in Sources */,
@@ -645,10 +669,10 @@
 		9962B7591E80E60900A333A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEVELOPMENT_TEAM = RQ7LPMR66B;
+				DEVELOPMENT_TEAM = 4A94WWANM7;
 				INFOPLIST_FILE = KcmTest1TodayWidget/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = net.openobject.TouchNPay.KcmTest1TodayWidget;
+				PRODUCT_BUNDLE_IDENTIFIER = kr.co.kcm.KcmTest1.KcmTest1TodayWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -657,10 +681,10 @@
 		9962B75A1E80E60900A333A8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEVELOPMENT_TEAM = RQ7LPMR66B;
+				DEVELOPMENT_TEAM = 4A94WWANM7;
 				INFOPLIST_FILE = KcmTest1TodayWidget/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = net.openobject.TouchNPay.KcmTest1TodayWidget;
+				PRODUCT_BUNDLE_IDENTIFIER = kr.co.kcm.KcmTest1.KcmTest1TodayWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -759,13 +783,13 @@
 			baseConfigurationReference = 37C41102D947620056AB04FB /* Pods-KcmTest1.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = RQ7LPMR66B;
+				DEVELOPMENT_TEAM = 4A94WWANM7;
 				GCC_PREFIX_HEADER = "KcmTest1/KcmTest1-Prefix.pch";
 				INFOPLIST_FILE = KcmTest1/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = net.openobject.TouchNPay;
+				PRODUCT_BUNDLE_IDENTIFIER = kr.co.kcm.KcmTest1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -776,13 +800,13 @@
 			baseConfigurationReference = 3EF017AEB878F601D8519CD8 /* Pods-KcmTest1.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = RQ7LPMR66B;
+				DEVELOPMENT_TEAM = 4A94WWANM7;
 				GCC_PREFIX_HEADER = "KcmTest1/KcmTest1-Prefix.pch";
 				INFOPLIST_FILE = KcmTest1/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = net.openobject.TouchNPay;
+				PRODUCT_BUNDLE_IDENTIFIER = kr.co.kcm.KcmTest1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
