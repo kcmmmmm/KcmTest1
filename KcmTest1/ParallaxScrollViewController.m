@@ -22,25 +22,24 @@
     [CustomNavigationBar navigationBarTitleViewController:self withTitle:@"스크롤줌"];
     [CustomNavigationBar drawBackButton:self withAction:@selector(onNaviBackButton)];
     
+    _headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 300)];
     
     _headerScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 300)];
+    [_headerView addSubview:_headerScrollView];
     
     _imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 300)];
-    [_imgView setBackgroundColor:[UIColor yellowColor]];
     [_imgView setImage:[UIImage imageNamed:@"image1.jpg"]];
-    [_imgView setContentMode:UIViewContentModeScaleAspectFit];
-    
+    _imgView.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
+    [_imgView setContentMode:UIViewContentModeScaleAspectFill];
     [_headerScrollView addSubview:_imgView];
     
     _tableView = [[UITableView alloc] initWithFrame:self.view.frame];
-    _tableView.backgroundColor = [UIColor clearColor];
     [_tableView setDataSource:self];
     [_tableView setDelegate:self];
     [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"];
-    [_tableView setContentInset:UIEdgeInsetsMake(0, 0, 0, 0)];
     [self.view addSubview:_tableView];
     
-    _tableView.tableHeaderView = _headerScrollView;
+    _tableView.tableHeaderView = _headerView;
 }
 
 #pragma mark - NavigationBar Action
@@ -58,34 +57,29 @@
 
 #pragma mark - UIScrollViewDelegate
 
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
+    _beginOffsetY = scrollView.contentOffset.y;
+}
+
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     
-    NSLog(@"-scrollView.contentOffset.y => %f", -scrollView.contentOffset.y);
-    NSLog(@"_tableView.contentInset.top => %f", _tableView.contentInset.top);
-    
-    CGRect frame = _imgView.frame;
+    CGRect frame = _headerScrollView.frame;
     
     if (scrollView.contentOffset.y > 0)
     {
-        _headerScrollView.clipsToBounds = YES;
-        
         frame.origin.y = MAX(scrollView.contentOffset.y * 0.5f, 0);
-        _imgView.frame = frame;
-        _imgView.clipsToBounds = YES;
-        
-//        [_headerScrollView setContentOffset:CGPointMake(0, MAX(scrollView.contentOffset.y * 0.5f, 0)) animated:NO];
+        _headerScrollView.frame = frame;
+        _headerView.clipsToBounds = YES;
     }
     else
     {
         CGFloat delta = 0.0f;
-        CGRect rect = CGRectMake(0, 0, _headerScrollView.frame.size.width, _headerScrollView.frame.size.height);
+        CGRect rect = CGRectMake(0, 0, _headerView.frame.size.width, _headerView.frame.size.height);
         delta = fabs(MIN(0.0f, scrollView.contentOffset.y));
         rect.origin.y -= delta;
         rect.size.height += delta;
         _headerScrollView.frame = rect;
-        _imgView.clipsToBounds = NO;
-        
-        _headerScrollView.clipsToBounds = NO;
+        _headerView.clipsToBounds = NO;
     }
     
 }
@@ -95,11 +89,13 @@
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    cell.contentView.frame = CGRectMake(0, cell.frame.size.height, cell.frame.size.width, cell.frame.size.height);
-    
-    [UIView animateWithDuration:1.0f animations:^{
-        cell.contentView.frame = CGRectMake(0, 0, cell.frame.size.width, cell.frame.size.height);
-    }];
+    if (_beginOffsetY < tableView.contentOffset.y) {
+        cell.contentView.frame = CGRectMake(0, cell.frame.size.height, cell.frame.size.width, cell.frame.size.height);
+        
+        [UIView animateWithDuration:0.5f animations:^{
+            cell.contentView.frame = CGRectMake(0, 0, cell.frame.size.width, cell.frame.size.height);
+        }];
+    }
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -119,7 +115,6 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
     cell.textLabel.text = item;
-    //    cell.backgroundColor = [UIColor clearColor];
     
     return cell;
 }
